@@ -1,5 +1,5 @@
 {% set name = "uniplot" %}
-{% set version = "0.12.6" %}
+{% set version = "0.12.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/uniplot-{{ version }}.tar.gz
-  sha256: b802ec76fbac61c78cdbe00647a3de33216aa1700649618dac10ef08f5e54ff9
+  sha256: 980ff00f8849ee7fb096199d7c0a692fbdc98748a5c2dc74ab03c63b80d10dc4
 
 build:
   noarch: python
