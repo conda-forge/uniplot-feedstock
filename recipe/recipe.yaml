@@ -1,0 +1,44 @@
+schema_version: 1
+
+context:
+  name: uniplot
+  version: 0.18.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/uniplot-${{ version }}.tar.gz
+  sha256: b20ac1c0b8e7739b58365602134acd4a7a4fa3bdf38ac4f5dca1c272615e2b5a
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - numpy >=1.22.0
+
+tests:
+  - python:
+      imports:
+        - uniplot
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: Lightweight plotting to the terminal. 4x resolution via Unicode.
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/olavolav/uniplot
+
+extra:
+  recipe-maintainers:
+    - thewchan
