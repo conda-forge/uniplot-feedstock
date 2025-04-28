@@ -1,5 +1,5 @@
 {% set name = "uniplot" %}
-{% set version = "0.17.1" %}
+{% set version = "0.18.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/uniplot-{{ version }}.tar.gz
-  sha256: 945b1a9bbab87bfd40d3364c9f0147d0b31fedd075251678dc75a5fd9b021a58
+  sha256: 56dc2963065a5efcc4f2a963cd0d20c18d65d8a5c6bb8782ee57882f5900e597
 
 build:
   noarch: python
@@ -17,7 +17,8 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - poetry-core
+    - setuptools
+    - wheel
     - pip
   run:
     - python >={{ python_min }}
