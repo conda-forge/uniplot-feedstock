@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: uniplot
-  version: "0.21.2"
+  version: "0.21.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/uniplot-${{ version }}.tar.gz
-  sha256: fc350d6e0f2352822747a3426fef7f521d1b3973585ad2e2967c702dfc6e8440
+  sha256: ef7e6d5bef477e6e07330d082a24fd0aee9fd5f10a711a2af9ff60d77f391b44
 
 build:
   number: 0
