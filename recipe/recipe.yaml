@@ -27,6 +27,7 @@ requirements:
     - python >=${{ python_min }}
     - numpy >=1.22.0
     - readchar >=4.2.1
+    - python-tzdata >=2024.1
 
 tests:
   - python:
